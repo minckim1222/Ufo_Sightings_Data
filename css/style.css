@@ -1,0 +1,15 @@
+body{
+    cursor: url(../images/tinfoilhat.png), auto;
+    background-image: url(../images/ufo_night.jpg);
+}
+.jumbotron {
+    background-color: transparent;
+    color:  limegreen;
+}
+.table{
+    color : white;
+}
+.dropdown-toggle{
+    background: white; 
+    border: none;
+}
