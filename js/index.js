@@ -61,10 +61,18 @@ function handleSubmitClick(event) {
 // Add switch event for the optional filters 
 function filteredDataFunction(userChoice){
     switch (userChoice) {
-        // case "dateFilter":
-            
-            
-        //     break;
+        case "dateFilter":
+
+        var userInput = $filterInput.value;
+        // trim and lower case the users city input
+        var filterDate = userInput;
+        // filter the data with cities
+        filteredData = dataSet.filter(function(choice)
+        {
+            var dataDate = choice.datetime;
+            return dataDate === filterDate;
+        }); 
+        break;
         case "cityFilter":
             var userInput = $filterInput.value;
             // trim and lower case the users city input
