@@ -21,31 +21,26 @@
             <p class="text-center">Don't let the government fool you. We are not alone.</p>
         </div>
         <div class="row">
-            <div class="col-md-2">
-                <div class="form-group">
-                    <input type="text" class="form-control" id="dateFilter" placeholder="Date">
-                    <a id="searchDate" class="btn btn-default">Date</a>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="cityFilter" placeholder="City">
-                    <a id="searchCity" class="btn btn-default">City</a>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="stateFilter" placeholder="State">
-                    <a id="searchState" class="btn btn-default">State</a>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="state" placeholder="Country">
-                    <a id="searchCountry" class="btn btn-default">Country</a>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="shapeFilter" placeholder="Shape">
-                    <a id="searchShape" class="btn btn-default">Shape</a>
-                </div> 
-                
+            <div class="col-md-3">
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
+                        <select id="selDataset" onchange="filteredDataFunction(this.value)">
+                            <option value="none">Criteria then filter</option>
+                            <option value="dateFilter">Date</option>
+                            <option value="cityFilter">City</option>
+                            <option value="stateFilter">State</option>
+                            <option value="countryFilter">Country</option>
+                            <option value="shapeFilter">Shape</option>
+                            <option value="resetFilter">Reset Table</option>
+                          </select>
+                    </span>
+                    <input type="text" class="form-control" placeholder="Enter criteria" aria-describedby="basic-addon1" id="filterInput">
+                    <input class="btn btn-default" type="button" value="Filter Data" id="filterBtn">
+
+                  </div>                
             </div>
             <div class="col-md-8">
-                <table class="table table-border order-table">
+                <table class="table table-border order-table" id="myTable">
                     <thead>
                         <tr>
                             <th>Date</th>
@@ -61,8 +56,12 @@
                     </tbody>
                 </table>
             </div>
+            
         </div>
+        
     </div>
+    
+    
     
     <script src="js/data.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>

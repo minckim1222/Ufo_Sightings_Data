@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 experimental
+=======
+experimental/
+>>>>>>> c4fdae10384a7f0f712c8ce3261aa89dd01dfdcc
 .DS_Store
 .vscode
 # Byte-compiled / optimized / DLL files
