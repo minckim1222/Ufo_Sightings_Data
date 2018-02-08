@@ -28,7 +28,6 @@ function renderTable(){
             $cell.innerText = dataPoint[field];
         }
     }
-    console.log($table.rows.length)
 }
 
 $filterBtn.addEventListener("click", handleSubmitClick);
@@ -38,7 +37,6 @@ function handleSubmitClick(event) {
     // The default behavior of a button clicked inside of a form is to try and submit the form somewhere (which we don't want)
     event.preventDefault();
     // set the filter parameters
-    console.log(filteredData)
     $filterInput.value = "";
     //reusing renderTable() function did not work.  however, rewriting the function worked. 
     $tbody.innerHTML = "";
@@ -132,9 +130,9 @@ function filteredDataFunction(userChoice){
 }
 
 function resetFilterMenu(){
-    elements = document.getElementById("selDataSet")
-    for(i=0; i < elements.length ; i++){
-    elements[i].selectedIndex= 0;
+    var elements = document.getElementById("selDataSet");
+    for(var i=0; i < elements.length ; i++){
+    elements[i].selected = elements[i].defaultSelected;
     }
 }
 
